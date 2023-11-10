@@ -5,11 +5,8 @@ import java.util.Objects;
 
 public class Department implements Serializable {
 
-
-private static final long serialVersionUID = 1L;
-private Integer Id;
+private Integer id;
 private String name;
-
 
 
 public Department() {
@@ -17,25 +14,21 @@ public Department() {
 }
 
 
-
 public Department(Integer id, String name) {
 	
-	Id = id;
+	this.id = id;
 	this.name = name;
 }
 
 
-
 public Integer getId() {
-	return Id;
+	return id;
 }
-
 
 
 public void setId(Integer id) {
-	Id = id;
+	this.id = id;
 }
-
 
 
 public String getName() {
@@ -43,18 +36,15 @@ public String getName() {
 }
 
 
-
 public void setName(String name) {
 	this.name = name;
 }
 
 
-
 @Override
 public int hashCode() {
-	return Objects.hash(Id, name);
+	return Objects.hash(id);
 }
-
 
 
 @Override
@@ -66,15 +56,15 @@ public boolean equals(Object obj) {
 	if (getClass() != obj.getClass())
 		return false;
 	Department other = (Department) obj;
-	return Objects.equals(Id, other.Id) && Objects.equals(name, other.name);
+	return Objects.equals(id, other.id);
 }
-
 
 
 @Override
 public String toString() {
-	return "Department [Id=" + Id + ", name=" + name + "]";
+	return "Department [id=" + id + ", name =" + name + "]";
 }
 
 
 }
+
