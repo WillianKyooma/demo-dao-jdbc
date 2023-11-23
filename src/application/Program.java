@@ -38,6 +38,10 @@ public class Program {
 	    }
 	    
 	    
+	    System.out.println("\n=== TEST 2: seller findByDepartment	=====");
+	    Seller newSeller = new Seller(null, "Greg", "Greg@gmail.com",new Date(),4000.0,department);
+	    sellerDao.insert(newSeller);
+	    System.out.println("Inserted new Id = " + newSeller.getId());
 	}
 
 }
